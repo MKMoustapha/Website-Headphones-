@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Headphones</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="body">
+    <div class="container">
+        <head>
+            <h1 class="logo">Headphone</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </head>
+        <div class="land">
+            <h1>Your Heart is Just a beatbox <br> for the song of your life</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam cupiditate <br> ipsam labore voluptatum velit, magnam aspernatur a! Eius doloremque exercitationem <br> voluptatibus amet unde autem ipsam mollitia delectus, placeat, natus asperiores?</p>
+            <button id="btn">Play a Song</button>
+            <div class="casque">
+                <div>
+                    <img src="black.png" alt="" id="img">
+                    <audio src="song/3.mp3" type="audio/mp3" id="audio"></audio>
+                    <div class="imgs">
+                        <img src="blue.png" alt="" id="bl" class="blue">
+                        <img src="red.png" alt="" id="red" class="red">
+                        <img src="black.png" alt="" id="black" class="black">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var song = document.getElementById("btn");
+        var sn = document.getElementById("audio");
+        var img = document.getElementById("img");
+        var red = document.getElementById("red");
+        var blue = document.getElementById("bl");
+        var black = document.getElementById("black");
+        var body = document.getElementById("body");
+        var bl = document.getElementById("bl");
+
+        red.onclick = function() {
+            sn.src = 'song/3.mp3';
+            img.src = 'red.png';
+            body.style.background = 'red';
+            if(sn.paused)  {
+                sn.play();
+                img.style.animation = 'anm .91s infinite';
+            }else {
+                sn.pause();
+            }
+        }
+        bl.onclick = function() {
+            sn.src = 'song/4.mp3';
+            img.src = 'blue.png';
+            body.style.background = '#08B4B8';
+            if(sn.paused)  {
+                sn.play();
+                img.style.animation = 'anm .91s infinite';
+            }else {
+                sn.pause();
+            }
+        }
+        black.onclick = function() {
+            sn.src = 'song/7.mp3';
+            img.src = 'black.png';
+            body.style.background = 'black';
+            if(sn.paused)  {
+                sn.play();
+                img.style.animation = 'anm .91s infinite';
+            }else {
+                sn.pause();
+            }
+        }
+    </script>
+</body>
+</html>
